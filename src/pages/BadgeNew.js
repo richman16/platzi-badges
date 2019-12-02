@@ -9,6 +9,33 @@ import BadgeForm from '../components/BadgeForm';
 import hero from '../images/badge-header.svg';
 
 class BadgeNew extends React.Component {
+    state = {
+        form: {
+            firstName: '',
+            lastName: '',
+            email: '',
+            jobTitle: '',
+            twitter: '',
+        },
+    };
+
+    handleChange = (event) => {
+        // Agregar una variable auxiliar
+        // const nextForm = this.state.form;
+        // nextForm[event.target.name] = event.target.value;
+        // this.setState({
+        //     form: nextForm,
+        // });
+
+        // Utilizamos mejor
+        this.setState({
+            form: {
+                ...this.state.form,
+                [event.target.name]: event.target.value,
+            },
+        });
+    };
+
     render () {
         return (
             <div>
@@ -22,15 +49,19 @@ class BadgeNew extends React.Component {
                     <div className="row">
                         <div className="col-6">
                             <Badge
-                                firstName="Ricardo"
-                                lastName="Castillo"
-                                twitter="richman16"
-                                jobTitle="IT engineer and web developer"
+                                firstName={this.state.form.firstName}
+                                lastName={this.state.form.lastName}
+                                twitter={this.state.form.twitter}
+                                jobTitle={this.state.form.jobTitle}
+                                email={this.state.form.email}
                                 avatar="https://www.gravatar.com/avatar/f44641a21a40330e05484ab104a66eb9?s=200" />
                         </div>
 
                         <div className="col-6">
-                            <BadgeForm />
+                            <BadgeForm
+                                onChange={this.handleChange}
+                                formValues={ this.state.form }
+                            />
                         </div>
                     </div>
                 </div>
