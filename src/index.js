@@ -4,16 +4,22 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import './styles/global.css';
 
-import Badge from './components/Badge';
+import BadgeNew from './pages/BadgeNew';
 
 const container = document.getElementById('app');
 
-ReactDOM.render(<Badge
-    firstName="Cali"
-    lastName="Castillo"
-    avatar="https://www.gravatar.com/avatar/f44641a21a40330e05484ab104a66eb9?s=200"
-    jobTitle="IT Engineer and web developer"
-    twitter="richman16" />,container);
+ReactDOM.render(<BadgeNew />, container);
+// ReactDOM.render(<Badge
+//     firstName="Cali"
+//     lastName="Castillo"
+//     avatar="https://www.gravatar.com/avatar/f44641a21a40330e05484ab104a66eb9?s=200"
+//     jobTitle="IT Engineer and web developer"
+//     twitter="richman16" />,container);
+
+
+
+
+
 
 // ReactDOM.render(__qué__, __dónde__);
 // ReactDOM.render(jsx,container);
