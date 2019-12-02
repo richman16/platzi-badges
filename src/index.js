@@ -8,7 +8,12 @@ import Badge from './components/Badge';
 
 const container = document.getElementById('app');
 
-ReactDOM.render(<Badge />,container);
+ReactDOM.render(<Badge
+    firstName="Cali"
+    lastName="Castillo"
+    avatar="https://www.gravatar.com/avatar/f44641a21a40330e05484ab104a66eb9?s=200"
+    jobTitle="IT Engineer and web developer"
+    twitter="richman16" />,container);
 
 // ReactDOM.render(__qué__, __dónde__);
 // ReactDOM.render(jsx,container);
