@@ -2,13 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 
+// Importar CSS Global a nuestra pagina principal
 import './styles/global.css';
 
-import BadgeNew from './pages/BadgeNew';
+// Importar la pagina de BadgeNew
+// import BadgeNew from './pages/BadgeNew';
+// Importar la pagina de Badges
+import Badges from './pages/Badges';
 
 const container = document.getElementById('app');
 
-ReactDOM.render(<BadgeNew />, container);
+ReactDOM.render(<Badges />, container);
+
+
+
+
 // ReactDOM.render(<Badge
 //     firstName="Cali"
 //     lastName="Castillo"
