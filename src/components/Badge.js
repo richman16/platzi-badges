@@ -4,6 +4,7 @@ import './styles/Badge.css';
 import confLogo from '../images/badge-header.svg';
 
 class Badge extends React.Component {
+    twitterURL = "https://www.twitter.com/"
     render() {
         // const firstName = "Ricardo";
         // const lastName = "Castillo";
@@ -23,7 +24,14 @@ class Badge extends React.Component {
 
             <div className="Badge__section-info">
                 <h3>{this.props.jobTitle}</h3>
-                <div>@{this.props.twitter}</div>
+                <div>
+                    <a
+                        href={this.twitterURL+this.props.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        @{this.props.twitter}
+                        </a>
+                </div>
             </div>
 
             <div className="Badge__footer">
