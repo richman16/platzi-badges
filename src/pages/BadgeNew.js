@@ -42,7 +42,10 @@ class BadgeNew extends React.Component {
                 <Navbar />
 
                 <div className="BadgeNew__hero">
-                    <img className="img-fluid" src={hero} alt="Logo" />
+                    <img
+                        className="img-fluid"
+                        src={hero}
+                        alt="Logo" />
                 </div>
 
                 <div className="container">
